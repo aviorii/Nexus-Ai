@@ -1,0 +1,201 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXUS AI | Your AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <div class="app-container">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">✦</div>
+                <span>NEXUS<span class="brand-ai"> AI</span></span>
+            </div>
+
+            <button class="new-chat-btn" id="newChatBtn">
+                <span>＋</span> New Conversation
+            </button>
+
+            <div class="sidebar-label">WORKSPACE</div>
+
+            <div class="nav-item active">
+                <span>◈</span> AI Assistant
+            </div>
+
+            <div class="nav-item">
+                <span>◷</span> Recent Activity
+            </div>
+
+            <div class="nav-item">
+                <span>⚙</span> Settings
+            </div>
+
+            <div class="sidebar-bottom">
+                <div class="upgrade-card">
+                    <div class="upgrade-icon">✧</div>
+                    <h3>Explore the future</h3>
+                    <p>Your ideas deserve more possibilities.</p>
+                    <button id="exploreBtn">Explore More ↗</button>
+                </div>
+
+                <div class="profile">
+                    <div class="profile-avatar">U</div>
+                    <div class="profile-info">
+                        <strong>My Workspace</strong>
+                        <span>Personal Account</span>
+                    </div>
+                    <span class="profile-menu">•••</span>
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+
+            <!-- TOP BAR -->
+            <header class="topbar">
+                <button class="mobile-menu" id="menuBtn">☰</button>
+
+                <div class="topbar-title">
+                    <span class="status-dot"></span>
+                    <span>NEXUS Assistant</span>
+                    <span class="version">BETA</span>
+                </div>
+
+                <button class="clear-btn" id="clearBtn">
+                    ↻ <span>Clear Chat</span>
+                </button>
+            </header>
+
+            <!-- CHAT AREA -->
+            <section class="chat-area" id="chatArea">
+
+                <div class="welcome-screen" id="welcomeScreen">
+
+                    <div class="hero-orb">
+                        <div class="orb-ring ring-one"></div>
+                        <div class="orb-ring ring-two"></div>
+                        <div class="orb-core">✦</div>
+                    </div>
+
+                    <div class="welcome-badge">
+                        <span class="status-dot"></span>
+                        YOUR INTELLIGENT COMPANION
+                    </div>
+
+                    <h1>
+                        Think beyond.<br>
+                        <span>Create anything.</span>
+                    </h1>
+
+                    <p class="welcome-description">
+                        Welcome to NEXUS AI. Your creative space
+                        to explore ideas, solve problems, and
+                        discover new possibilities.
+                    </p>
+
+                    <div class="suggestion-grid">
+
+                        <button class="suggestion-card"
+                            data-prompt="Give me creative project ideas.">
+                            <span class="suggestion-icon purple">✧</span>
+                            <span>
+                                <strong>Creative Ideas</strong>
+                                <small>Discover something new</small>
+                            </span>
+                            <span class="arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-prompt="Teach me something interesting about technology.">
+                            <span class="suggestion-icon blue">⌘</span>
+                            <span>
+                                <strong>Learn Something</strong>
+                                <small>Explore new knowledge</small>
+                            </span>
+                            <span class="arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-prompt="Help me write a creative story.">
+                            <span class="suggestion-icon pink">✎</span>
+                            <span>
+                                <strong>Write Something</strong>
+                                <small>Turn thoughts into words</small>
+                            </span>
+                            <span class="arrow">↗</span>
+                        </button>
+
+                        <button class="suggestion-card"
+                            data-prompt="Give me a beginner-friendly coding challenge.">
+                            <span class="suggestion-icon cyan">⌘</span>
+                            <span>
+                                <strong>Code & Build</strong>
+                                <small>Bring your ideas to life</small>
+                            </span>
+                            <span class="arrow">↗</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- MESSAGES APPEAR HERE -->
+                <div class="messages" id="messages"></div>
+
+            </section>
+
+            <!-- INPUT AREA -->
+            <footer class="input-section">
+
+                <div class="input-wrapper">
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Ask NEXUS anything..."
+                        rows="1"
+                    ></textarea>
+
+                    <div class="input-actions">
+
+                        <div class="input-hint">
+                            <span>✦</span> AI-powered experience
+                        </div>
+
+                        <button id="sendBtn" class="send-btn">
+                            <span>↑</span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <p class="disclaimer">
+                    NEXUS AI is a demo interface. Responses are simulated.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
